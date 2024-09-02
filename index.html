@@ -3,12 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
+    <title>Product Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my webpage.</p>
-    <script src="scripts.js"></script>
+    <div class="container">
+        <h1>Product Store</h1>
+        <div class="product" id="product-original">
+            <h2>Original</h2>
+            <p>Price: $1500</p>
+            <input type="number" id="quantity-original" value="0" min="0">
+            <button onclick="addToCart('Original', 1500, 'quantity-original')">Add to Cart</button>
+        </div>
+        <div class="product" id="product-chocooriginal">
+            <h2>ChocoOriginal</h2>
+            <p>Price: $2000</p>
+            <input type="number" id="quantity-chocooriginal" value="0" min="0">
+            <button onclick="addToCart('ChocoOriginal', 2000, 'quantity-chocooriginal')">Add to Cart</button>
+        </div>
+        
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items">
+                <!-- Cart items will be displayed here -->
+            </ul>
+            <p id="total-price">Total: $0</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
